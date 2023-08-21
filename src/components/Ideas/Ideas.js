@@ -1,7 +1,7 @@
 import './Ideas.css';
 import Card from '../Card/Card';
 
-function Ideas({ideas }) {
+function Ideas({ ideas }) {
   
   const ideaCards = ideas.map(idea => {
     return (
