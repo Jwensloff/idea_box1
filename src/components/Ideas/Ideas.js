@@ -1,10 +1,15 @@
-import './Ideas.css'
+import './Ideas.css';
+import Card from '../Card/Card';
 
 function Ideas({ name }) {
   // const { name } = props
 
   return(
-    <h2>Hello { name }</h2>
+    <div className='ideas-container'>
+      <Card />
+      <Card />
+      <Card />
+    </div>
   )
 }
 
