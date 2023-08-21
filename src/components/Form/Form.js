@@ -13,6 +13,8 @@ function Form({ addIdea }) {
       title, 
       description
     }
+    addIdea(newIdea);
+    clearInput();
   }
 
   function clearInput() {
