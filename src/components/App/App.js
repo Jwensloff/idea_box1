@@ -26,7 +26,6 @@ function App() {
   return (
     <main className='App'>
       <h1>IdeaBox</h1>
-      <p>Hello world.</p>
       <Ideas name='Travis'/>
     </main>
   );
