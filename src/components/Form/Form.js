@@ -1,9 +1,24 @@
 import { useState } from 'react';
 import './Form.css';
 
-function Form() {
+function Form({ addIdea }) {
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+
+  function submitIdeas(event) {
+    event.preventDefault() 
+    const newIdea = {
+      id: Date.now(),
+      title, 
+      description
+    }
+  }
+
+  function clearInput() {
+    setTitle('');
+    setDescription('');
+  }
 
   return (
     <form>
@@ -15,7 +30,7 @@ function Form() {
         onChange={event => 
           setTitle(event.target.value)}
         />
-        
+
       <input
         type='text'
         placeholder='Description'
@@ -24,7 +39,9 @@ function Form() {
         onChange={event => 
           setDescription(event.target.value)}
       />
-      <button>SUBMIT</button>
+
+      <button onClick = { event => 
+        submitIdeas(event)}>SUBMIT</button>
     </form>
   );
 }
