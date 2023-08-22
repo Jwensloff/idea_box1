@@ -11,14 +11,16 @@ function Ideas({ ideas }) {
       id={idea.id}
       key={idea.id}
       />
-    )
-  })
+    );
+
+  });
 
   return(
     <div className='ideas-container'>
       {ideaCards}
     </div>
-  )
-}
+  );
+
+};
 
 export default Ideas;

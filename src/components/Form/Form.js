@@ -7,20 +7,23 @@ function Form({ addIdea }) {
   const [description, setDescription] = useState('');
 
   function submitIdeas(event) {
-    event.preventDefault() 
+    
+    event.preventDefault(); 
+
     const newIdea = {
       id: Date.now(),
       title, 
       description
-    }
+    };
+
     addIdea(newIdea);
     clearInput();
-  }
+  };
 
   function clearInput() {
     setTitle('');
     setDescription('');
-  }
+  };
 
   return (
     <form>
@@ -45,7 +48,9 @@ function Form({ addIdea }) {
       <button onClick = { event => 
         submitIdeas(event)}>SUBMIT</button>
     </form>
+
   );
-}
+
+};
 
 export default Form;

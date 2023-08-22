@@ -8,7 +8,8 @@ function Card({ title, description, id }) {
       <p>{description}</p>
       <button>🗑️</button>
     </div>
-  )
-}
+  );
+
+};
 
 export default Card;
