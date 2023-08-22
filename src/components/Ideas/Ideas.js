@@ -1,7 +1,7 @@
 import './Ideas.css';
 import Card from '../Card/Card';
 
-function Ideas({ideas }) {
+function Ideas({ ideas }) {
   
   const ideaCards = ideas.map(idea => {
     return (
@@ -11,14 +11,16 @@ function Ideas({ideas }) {
       id={idea.id}
       key={idea.id}
       />
-    )
-  })
+    );
+
+  });
 
   return(
     <div className='ideas-container'>
       {ideaCards}
     </div>
-  )
-}
+  );
+
+};
 
 export default Ideas;
